@@ -1,7 +1,7 @@
 "use client";
 
 import ProductCard from "@/components/Products/ProductCard";
-import SkeletonProductCard from "@/components/SkeletonProductCard";
+import SkeletonProductCard from "@/components/Skeletons/SkeletonProductCard";
 import { useGetProductsQuery } from "@/store/features/products/productApiSlice";
 
 export default function Home() {

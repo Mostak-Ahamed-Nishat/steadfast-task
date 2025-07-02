@@ -7,7 +7,12 @@ export const productApi = apiSlice.injectEndpoints({
       query: () => `/shop/products`,
       providesTags: ["Products"],
     }),
+    //Get Single Product
+    getProduct: builder.query({
+      query: (slug) => `/product/${slug}`,
+      providesTags: (result, error, slug) => [{ type: "Products", id: slug }],
+    }),
   }),
 });
 
-export const { useGetProductsQuery } = productApi;
+export const { useGetProductsQuery, useGetProductQuery } = productApi;

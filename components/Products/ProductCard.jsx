@@ -38,11 +38,11 @@ export default function ProductCard({ product }) {
 
                 {/* Badges positioned in top right corner */}
                 {product.badges && product.badges.length > 0 && (
-                    <div className="absolute top-2 right-2 flex flex-col gap-1">
+                    <div className="absolute top-0 right-0 flex flex-col gap-1">
                         {product.badges.map((badge) => (
                             <span
                                 key={badge.id}
-                                className="bg-green-500 text-white px-2 py-1 rounded text-xs font-medium shadow-md"
+                                className="bg-[#00968a] text-white px-2 py-1 rounded text-xs font-medium shadow-md"
                             >
                                 {badge.name}
                             </span>

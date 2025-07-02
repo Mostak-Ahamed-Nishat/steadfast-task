@@ -1,5 +1,7 @@
+// app/layout.js or app/layout.tsx (no "use client")
 import { Onest } from "next/font/google";
 import "./globals.css";
+import ReduxProvider from "./providers/ReduxProvider";
 
 const onest = Onest({
   variable: "--font-sans",
@@ -10,15 +12,14 @@ const onest = Onest({
 
 export const metadata = {
   title: "FALCON",
-  description: "A E-commerce platform for the future",
+  description: "An E-commerce platform for the future",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${onest.variable} antialiased bg-background`}>
-        <h1>Hello world!</h1>
-        {children}
+        <ReduxProvider>{children}</ReduxProvider>
       </body>
     </html>
   );

@@ -5,7 +5,6 @@ import envConfig from "@/config/envConfig";
 
 export const store = configureStore({
   reducer: {
-    auth: authReducer,
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) =>
